@@ -95,3 +95,46 @@ The excel preview in the studio uses Microsoft Excel Online service which requir
 
 The first options `previewInExcelOnline` will force the recipe to always return a file stream to the studio instead of the excel online preview.  The second option `publicUriForPreview` allows you to set url to the public server which should be used instead of jsreport.net. Such a server need to accept POST with the file stream, return a string id of the file which needs to be accessible afterwards with GET.
 
+## Structured Reporting Template
+
+This template provides a structured report based on rows of data, with rows optionally _grouped_, and with individual rows containing an optional & variable number of _periods_ (e.g. per-month report data).
+
+For example:
+<table>
+  <tr>
+    <th>Client</th>
+    <th>June</th>
+    <th>July</th>
+    <th>Total</th>
+  </tr>
+  <tr>
+    <td colspan="4">Web Development</td>
+  </tr>
+  <tr>
+    <td>Client A</td>
+    <td align="right">$500</td>
+    <td align="right">$1,600</td>
+    <td align="right">$2,100</td>
+  </tr>
+<tr>
+    <td>Client B</td>
+    <td align="right">-</td>
+    <td align="right">$200</td>
+    <td align="right">$200</td>
+  </tr>
+  <tr>
+    <td colspan="4">Mobile Apps</td>
+  </tr>
+  <tr>
+    <td>Client C</td>
+    <td align="right">$500</td>
+    <td align="right">$1,600</td>
+    <td align="right">$2,100</td>
+  </tr>
+<tr>
+    <td>Client D</td>
+    <td align="right">-</td>
+    <td align="right">$200</td>
+    <td align="right">$200</td>
+  </tr>
+</table>
